@@ -1,13 +1,16 @@
-# Docker Registry Helm Chart
+# Buildinglink Daily Digest
 
-This directory contains a Kubernetes chart to deploy a private Docker Registry.
+This chart install and configures an instance of the buildinglink 
+daily digest emails ervce.
 
 ## Prerequisites Details
 
-* PV support on underlying infrastructure (if persistence is required)
+* These services require access to the underlying infrastructure for Rabbit MQ and Sql Server
 
 ## Chart Details
 
 This chart will do the following:
 
-* Implement a Docker registry deployment
+* Implement digestqueue - a digest creation/distribution service
+* Implement digestmailer - a scalable mailer service
+  
