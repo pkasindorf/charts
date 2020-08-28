@@ -7,6 +7,7 @@ questions:
   required: true
   options:
     - "filesystem"
+    - "s3"
     - "azure"
   group: "Storage System Settings"
 # azure configuration
@@ -34,10 +35,16 @@ questions:
   required: true
   group: "Storage System Settings"
   show_if: "storage=azure"
-
-  # persistence setting
+# persistence setting
+- variable: persistence.enabled
+  default: false
+  description: "Enable persistent volume for Docker registry"
+  type: boolean
+  label: Persistent Volume Enabled
+  show_subquestion_if: true
+  group: "Persistent Storage"
   subquestions:
-  "Expose app using Layer 7 Load Balancer - ingress" variable: persistence.size
+  - variable: persistence.size
     default: "50Gi"
     description: "Docker registry Registry Persistent Volume Size"
     type: string
