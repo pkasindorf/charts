@@ -1,0 +1,11 @@
+apiVersion: v2
+description: A Helm chart for daily digest mailer service
+name: daily-digest-mailer
+version: 1.0.0
+appVersion: 2.7.1
+icon: file://../logo.png
+maintainers:
+  - name: codemarc
+    email: codemarc@gmail.com
+  - name: marc  
+    email: marc@buildinglink.com

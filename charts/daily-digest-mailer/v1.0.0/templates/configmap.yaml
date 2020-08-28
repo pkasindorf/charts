@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "daily-digest-mailer.fullname" . }}-config
+  labels:
+    app: {{ template "daily-digest-mailer.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+data:
+  config.yml: |-
+{{ toYaml .Values.configData | indent 4 }}
