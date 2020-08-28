@@ -27,8 +27,6 @@ daily digest mailer service.
   * API Client Id mapped for a service account
 
 
-
-
 ## Chart Details
 
 This chart does the following:
