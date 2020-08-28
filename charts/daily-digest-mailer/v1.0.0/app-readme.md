@@ -1,4 +1,4 @@
-# Daily Digest
+# Daily Digest Mailer
 
 This chart install and configures an instance of the buildinglink 
 daily digest mailer service.
