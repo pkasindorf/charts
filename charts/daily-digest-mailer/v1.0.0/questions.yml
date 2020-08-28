@@ -1,10 +1,4 @@
 questions:
-- variable: secrets.htpasswd
-  default: ""
-  description: "Htpasswd authentication containing your user:pass associations"
-  type: password
-  label: Docker Registry Htpasswd Authentication
-  group: "Secret Settings"
 - variable: storage
   default: "filesystem"
   description: "Storage system to use"
@@ -13,59 +7,8 @@ questions:
   required: true
   options:
     - "filesystem"
-    - "s3"
     - "azure"
-    - "swift"
   group: "Storage System Settings"
-# s3 storage config
-- variable: s3.region
-  default: "us-east-1"
-  description: "S3 region"
-  type: string
-  label: S3 Region
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=s3"
-- variable: s3.bucket
-  default: ""
-  description: "S3 bucket name"
-  type: string
-  label: S3 Bucket Name
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=s3"
-- variable: secrets.s3.accessKey
-  default: ""
-  description: "Access Key for S3 configuration	"
-  type: string
-  label: AWS S3 AccessKey
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=s3"
-- variable: secrets.s3.secretKey
-  default: ""
-  description: "Secret Key for S3 configuration	"
-  type: password
-  label: AWS S3 SecretKey
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=s3"
-- variable: s3.encrypt
-  default: false
-  description: "Store images in encrypted format"
-  type: boolean
-  label: S3 Encrypted
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=s3"
-- variable: s3.secure
-  default: true
-  description: "Use HTTPS"
-  type: boolean
-  label: Use HTTPS
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=s3"
 # azure configuration
 - variable: secrets.azure.accountName
   default: ""
@@ -91,49 +34,10 @@ questions:
   required: true
   group: "Storage System Settings"
   show_if: "storage=azure"
-# swift configuration
-- variable: swift.authurl
-  default: "http://swift.example.com/"
-  description: "Openshift swift authurl"
-  type: string
-  label: Swift Authurl
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=swift"
-- variable: swift.container
-  default: ""
-  description: "Openshift swift container name"
-  type: string
-  label: Swift Container
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=swift"
-- variable: secrets.swift.username
-  default: ""
-  description: "Username for Swift configuration"
-  type: string
-  label: Openshift Swift Username
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=swift"
-- variable: secrets.swift.password
-  default: ""
-  description: "Password for Swift configuration"
-  type: password
-  label: Openshift Swift Password
-  required: true
-  group: "Storage System Settings"
-  show_if: "storage=swift"
-# persistence setting
-- variable: persistence.enabled
-  default: false
-  description: "Enable persistent volume for Docker registry"
-  type: boolean
-  label: Persistent Volume Enabled
-  show_subquestion_if: true
-  group: "Persistent Storage"
+
+  # persistence setting
   subquestions:
-  - variable: persistence.size
+  "Expose app using Layer 7 Load Balancer - ingress" variable: persistence.size
     default: "50Gi"
     description: "Docker registry Registry Persistent Volume Size"
     type: string
