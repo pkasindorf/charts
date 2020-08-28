@@ -1,6 +1,6 @@
 # Daily Digest Mailer
 
-This chart install and configures an instance of the buildinglink 
+This chart installs and configures an instance of the buildinglink 
 daily digest mailer service.
 
 ## Prerequisites Details
@@ -10,7 +10,7 @@ daily digest mailer service.
 
 ## Chart Details
 
-This chart will do the following:
+This chart does the following:
 
-* Install the digestmailer service - a scalable mailer service
+* Installs the digestmailer service - a scalable mailer service
   
