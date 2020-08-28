@@ -16,16 +16,9 @@ image:
   repository: blemailservicesregistry.azurecr.io/digestmailer
   tag: latest
   pullPolicy: Always
-# imagePullSecrets:
-    # - name: docker
-#service:
-  #name: registry
-  #type: ClusterIP
-  # clusterIP:
-  #port: 5000
-  # nodePort:
-  #annotations: {}
-  # foo.io/bar: "true"
+service:
+  name: digestmailer
+  type: ClusterIP
 ingress:
   enabled: false
   path: /
