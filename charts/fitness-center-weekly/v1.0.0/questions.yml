@@ -9,15 +9,15 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "quay.io/jetstack/cert-manager-controller"
-    description: "Cert-Manager Docker image name"
+    default: "quay.io/jetstack/fitness-center-weekly-controller"
+    description: "fitness-center-weekly Docker image name"
     type: string
-    label: Cert-Manager Docker Image Name
+    label: fitness-center-weekly Docker Image Name
   - variable: image.tag
     default: "v0.3.0"
-    description: "Cert-Manager Docker image tag"
+    description: "fitness-center-weekly Docker image tag"
     type: string
-    label: Cert-Manager Image Tag
+    label: fitness-center-weekly Image Tag
 - variable: ingressShim.defaultIssuerName
   default: "letsencrypt-staging"
   required: true

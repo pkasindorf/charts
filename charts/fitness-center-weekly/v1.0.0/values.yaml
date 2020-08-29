@@ -1,17 +1,17 @@
-# Default values for cert-manager.
+# Default values for fitness-center-weekly.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
 
 image:
-  repository: quay.io/jetstack/cert-manager-controller
+  repository: quay.io/jetstack/fitness-center-weekly-controller
   tag: v0.3.0
   pullPolicy: IfNotPresent
 
 createCustomResource: true
 
 # Override the namespace used to store DNS provider credentials etc. for ClusterIssuer
-# resources. By default, the same namespace as cert-manager is deployed within is
+# resources. By default, the same namespace as fitness-center-weekly is deployed within is
 # used. This namespace will not be automatically created by the Helm chart.
 clusterResourceNamespace: ""
 
@@ -34,7 +34,7 @@ serviceAccount:
 
 # Optional additional arguments
 extraArgs: []
-  # Use this flag to set a namespace that cert-manager will use to store
+  # Use this flag to set a namespace that fitness-center-weekly will use to store
   # supporting resources required for each ClusterIssuer (default is kube-system)
   # - --cluster-resource-namespace=kube-system
 
@@ -48,7 +48,7 @@ podAnnotations: {}
 podLabels: {}
 # Optional DNS settings, useful if you have a public and private DNS zone for
 # the same domain on Route 53. What follows is an example of ensuring
-# cert-manager can access an ingress or DNS TXT records at all times.
+# fitness-center-weekly can access an ingress or DNS TXT records at all times.
 # NOTE: This requires Kubernetes 1.10 or `CustomPodDNS` feature gate enabled for
 # the cluster to work.
 # podDnsPolicy: "None"
@@ -70,6 +70,6 @@ letsencrypt:
   server: "https://acme-staging-v02.api.letsencrypt.org/directory"
 
 # This is used by the static manifest generator in order to create a static
-# namespace manifest for the namespace that cert-manager is being installed
+# namespace manifest for the namespace that fitness-center-weekly is being installed
 # within. It should **not** be used if you are using Helm for deployment.
 createNamespaceResource: false

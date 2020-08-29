@@ -1,23 +1,23 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: {{ template "cert-manager.fullname" . }}
+  name: {{ template "fitness-center-weekly.fullname" . }}
   namespace: {{ .Release.Namespace | quote }}
   labels:
-    app: {{ template "cert-manager.name" . }}
-    chart: {{ template "cert-manager.chart" . }}
+    app: {{ template "fitness-center-weekly.name" . }}
+    chart: {{ template "fitness-center-weekly.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "cert-manager.name" . }}
+      app: {{ template "fitness-center-weekly.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "cert-manager.name" . }}
+        app: {{ template "fitness-center-weekly.name" . }}
         release: {{ .Release.Name }}
 {{- if .Values.podLabels }}
 {{ toYaml .Values.podLabels | indent 8 }}
@@ -27,7 +27,7 @@ spec:
 {{ toYaml .Values.podAnnotations | indent 8 }}
       {{- end }}
     spec:
-      serviceAccountName: {{ template "cert-manager.serviceAccountName" . }}
+      serviceAccountName: {{ template "fitness-center-weekly.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

@@ -2,10 +2,10 @@
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
 metadata:
-  name: {{ template "cert-manager.fullname" . }}
+  name: {{ template "fitness-center-weekly.fullname" . }}
   labels:
-    app: {{ template "cert-manager.name" . }}
-    chart: {{ template "cert-manager.chart" . }}
+    app: {{ template "fitness-center-weekly.name" . }}
+    chart: {{ template "fitness-center-weekly.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 rules:
@@ -15,7 +15,7 @@ rules:
   - apiGroups: [""]
     # TODO: remove endpoints once 0.4 is released. We include it here in case
     # users use the 'master' version of the Helm chart with a 0.2.x release of
-    # cert-manager that still performs leader election with Endpoint resources.
+    # fitness-center-weekly that still performs leader election with Endpoint resources.
     # We advise users don't do this, but some will anyway and this will reduce
     # friction.
     resources: ["endpoints", "configmaps", "secrets", "events", "services", "pods"]
@@ -27,18 +27,18 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
-  name: {{ template "cert-manager.fullname" . }}
+  name: {{ template "fitness-center-weekly.fullname" . }}
   labels:
-    app: {{ template "cert-manager.name" . }}
-    chart: {{ template "cert-manager.chart" . }}
+    app: {{ template "fitness-center-weekly.name" . }}
+    chart: {{ template "fitness-center-weekly.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: {{ template "cert-manager.fullname" . }}
+  name: {{ template "fitness-center-weekly.fullname" . }}
 subjects:
-  - name: {{ template "cert-manager.serviceAccountName" . }}
+  - name: {{ template "fitness-center-weekly.serviceAccountName" . }}
     namespace: {{ .Release.Namespace | quote }}
     kind: ServiceAccount
 {{- end -}}

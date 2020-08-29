@@ -1,15 +1,15 @@
-name: cert-manager
+name: fitness-center-weekly
 version: v0.3.2
 appVersion: v0.3.0
-description: A Helm chart for cert-manager
-home: https://github.com/jetstack/cert-manager
+description: A Helm chart for fitness-center-weekly
+home: https://github.com/jetstack/fitness-center-weekly
 keywords:
-  - cert-manager
+  - buildinglink-aware
   - kube-lego
   - letsencrypt
   - tls
 sources:
-  - https://github.com/jetstack/cert-manager
+  - https://github.com/jetstack/fitness-center-weekly
 icon: file://../logo.png
 maintainers:
   - name: Marc J. Greenberg

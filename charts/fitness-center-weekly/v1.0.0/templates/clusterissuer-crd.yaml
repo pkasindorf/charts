@@ -4,8 +4,8 @@ kind: CustomResourceDefinition
 metadata:
   name: clusterissuers.certmanager.k8s.io
   labels:
-    app: {{ template "cert-manager.name" . }}
-    chart: {{ template "cert-manager.chart" . }}
+    app: {{ template "fitness-center-weekly.name" . }}
+    chart: {{ template "fitness-center-weekly.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
