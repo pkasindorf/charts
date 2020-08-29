@@ -1,16 +1,13 @@
 name: fitness-center-weekly
-version: v0.3.2
-appVersion: v0.3.0
+version: v1.0.0
+appVersion: v1.8.5
 description: A Helm chart for fitness-center-weekly
-home: https://github.com/jetstack/fitness-center-weekly
+home: https://www.aware.buildinglink.com/fitness-center
 keywords:
   - buildinglink-aware
-  - kube-lego
-  - letsencrypt
-  - tls
+  - fitness-center
 sources:
-  - https://github.com/jetstack/fitness-center-weekly
-icon: file://../logo.png
+  - https://tfs.buildinglink.com/BuildingLink/Default/_git/Analytics?path=%2FPowerBI%2Fscripts%2Ffitness&version=GBmaster#path=%2FPowerBI%2Fscripts%2Ffitness%2Ffitness8&version=GBmaster
 maintainers:
   - name: Marc J. Greenberg
     email: marc@buildinglink.com
