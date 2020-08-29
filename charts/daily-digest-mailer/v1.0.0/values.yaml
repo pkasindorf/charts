@@ -1,6 +1,7 @@
 # Default values for daily-digest-mailer.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+
 replicaCount: 1
 
 updateStrategy:
@@ -16,6 +17,8 @@ image:
   repository: blemailservicesregistry.azurecr.io/digestmailer
   tag: latest
   pullPolicy: Always
+
+
 service:
   name: digestmailer
   type: ClusterIP
@@ -45,14 +48,16 @@ resources: {}
   # requests:
   #  cpu: 100m
   #  memory: 128Mi
-#persistence:
-  #accessMode: 'ReadWriteOnce'
-  #enabled: false
-  #size: 10Gi
-  # storageClass: '-'
 
-# set the type of filesystem to use: filesystem, s3
-# storage: filesystem
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+azureSql:
+  azuresqllUserName: "BuildingLinkMail"
+  azuresqlPassword: "GhBZdq6ELS5z"
 
 # Set this to name of secret for tls certs
 # tlsSecretName: registry.docker.example.com
@@ -60,9 +65,9 @@ secrets:
   # haSharedSecret: ""
   # htpasswd: ""
 # Secrets for Azure
-   azure:
-     accountName: ""
-     accountKey: ""
+   azuresql:
+     userName: ""
+     accoupassword" ""
      container: ""
 
 configData:

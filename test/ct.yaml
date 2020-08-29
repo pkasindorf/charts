@@ -1,8 +1,7 @@
 remote: rancher-charts
-target-branch: master
+target-branch: v1.0.3
 chart-dirs:
   - charts
-  - proposed
 excluded-charts:
 chart-repos:
 helm-extra-args: --timeout 600
