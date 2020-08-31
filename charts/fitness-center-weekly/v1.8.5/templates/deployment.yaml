@@ -35,8 +35,13 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 3000
               protocol: TCP
+          env:
+            - name: BLDBPRO
+              value: "aware"
+            - name: BLRANCHER
+              value: "https://rancher.buildinglink.com"
           livenessProbe:
             httpGet:
               path: /
