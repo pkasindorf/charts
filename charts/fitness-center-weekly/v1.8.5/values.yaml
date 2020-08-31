@@ -5,9 +5,8 @@ image:
   pullPolicy: IfNotPresent
   tag: "1.8.5"
 
-# database -- profile override. 
-database: ""
-
+database: '{"profile":"*aware"}'
+sentry: '{"profile":"*test"}'
 
 serviceAccount:
   # Specifies whether a service account should be created

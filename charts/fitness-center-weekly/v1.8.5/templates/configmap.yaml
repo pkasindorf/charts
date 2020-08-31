@@ -7,4 +7,6 @@ metadata:
 data:
   database: 
     {{ toYaml .Values.configOverride | indent 2 }}
+  sentry: 
+    {{ toYaml .Values.configOverride | indent 2 }}
   
