@@ -8,10 +8,4 @@ image:
   repository: buildinglink/fitnessweekly
   pullPolicy: IfNotPresent
   tag: "1.8.5"
-ports:
-  - containerPort: 3000
-    hostPort: 3000
-    name: tcp3000
-    protocol: TCP
-    
-  resources: {}
+  

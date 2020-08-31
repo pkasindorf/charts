@@ -10,8 +10,6 @@ keywords:
   - aware
   - iot
   - solutions
-sources:
-  - https://github.com/BuildingLink/charts
 maintainers:
   - name: buildinglink  
     email: charts@buildinglink.com
