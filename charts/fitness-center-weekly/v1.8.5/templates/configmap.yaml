@@ -5,7 +5,6 @@ metadata:
   labels:
 {{ include "fitness-center-weekly.labels" . | indent 4 }}
 data:
-  azure: '{"storage":{"account":"*azure-storage-account","container":"buildinglink-fitness-weekly"}}'
-  batch: '{"template":"index.tmpl","subject":"Fitness Center Weekly - [[PropertyName]]
-    - [[Starts]] - [[Ends]]","email":"test","batchv":["SolutionN
-  database: '{"profile":"*aware"}'
+  database: 
+    {{ toYaml .Values.configOverride | indent 2 }}
+  
