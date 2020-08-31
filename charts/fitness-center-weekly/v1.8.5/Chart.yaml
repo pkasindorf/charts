@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v1
 name: fitness-center-weekly
 description: fitness center weekly mailer
 type: application
