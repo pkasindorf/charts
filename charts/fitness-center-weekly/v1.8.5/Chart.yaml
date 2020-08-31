@@ -5,6 +5,11 @@ type: application
 version: 0.1.4
 appVersion: 1.8.5
 icon: file://../logo.png
+keywords:
+  - buildinglink
+  - aware
+  - iot
+  - solutions
 sources:
   - https://github.com/BuildingLink/charts
 maintainers:
