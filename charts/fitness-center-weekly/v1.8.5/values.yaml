@@ -5,8 +5,8 @@ image:
   pullPolicy: IfNotPresent
   tag: "1.8.5"
 
-database: '{"profile":"*aware"}'
-sentry: '{"profile":"*test"}'
+database: ""
+sentry: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
