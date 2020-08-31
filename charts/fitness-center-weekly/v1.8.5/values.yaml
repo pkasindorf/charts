@@ -24,9 +24,8 @@ ingress:
   #      - chart-example.local
 
 env:
-  open:
-    BLDBPRO: aware
-    BLRANCHER: https://rancher.buildinglink.com
+  BLDBPRO: aware
+  BLRANCHER: https://rancher.buildinglink.com
 
 resources: {}
 #  limits:
