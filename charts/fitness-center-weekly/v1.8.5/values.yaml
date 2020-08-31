@@ -8,5 +8,5 @@ image:
   repository: buildinglink/fitnessweekly
   pullPolicy: IfNotPresent
   tag: "1.8.5"
-services:
+service:
   port: 3000  
