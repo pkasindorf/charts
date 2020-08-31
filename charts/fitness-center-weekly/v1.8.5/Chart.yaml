@@ -1,3 +1,4 @@
+{{- if eq .Values.shoudBeDeployed true }}
 apiVersion: v1
 name: fitness-center-weekly
 description: fitness center weekly mailer
@@ -13,4 +14,4 @@ keywords:
 maintainers:
   - name: buildinglink  
     email: charts@buildinglink.com
-
+{{- end }}
