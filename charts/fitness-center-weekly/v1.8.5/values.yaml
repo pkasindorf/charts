@@ -53,9 +53,11 @@ ingress:
   #      - chart-example.local
 
 env:
-  - name: "BLRANCHER"
+  - name: BLDBPRO
+    value: "aware"
+  - name: BLRANCHER
     value: "https://rancher.buildinglink.com"
-    
+
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
