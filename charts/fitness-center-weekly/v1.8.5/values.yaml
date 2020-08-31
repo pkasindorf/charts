@@ -5,8 +5,10 @@ image:
   pullPolicy: IfNotPresent
   tag: "1.8.5"
 
-database:
-  profile: "*aware"
+azure: ""
+batch: ""
+database: ""
+
 
 serviceAccount:
   # Specifies whether a service account should be created
