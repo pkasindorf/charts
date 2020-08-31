@@ -4,3 +4,8 @@ image:
   repository: buildinglink/fitnessweekly
   pullPolicy: IfNotPresent
   tag: "1.8.5"
+
+service:
+  type: ClusterIP
+  port: 3000
+
