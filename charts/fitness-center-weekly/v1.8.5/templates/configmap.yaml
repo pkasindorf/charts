@@ -3,40 +3,4 @@ kind: ConfigMap
 metadata:
   name: {{ include "fitness-center-weekly.fullname" }}
 data:
-  azure: '{"storage":{"account":"*azure-storage-account","container":"buildinglink-fitness-weekly"}}'
-  batch: '{"template":"index.tmpl","subject":"Fitness Center Weekly - [[PropertyName]]
-    - [[Starts]] - [[Ends]]","email":"test","batchv":["SolutionName","PropertyName","EmailAddresses","Date","Starts","Ends","Status"]}'
-  database: '{"profile":"*aware"}'
-  email-on-error: '["marc@buildinglink.com"]'
-  email-test: '["marc@buildinglink.com"]'
-  mq: '{"connection":"*live"}'
-  mq-FitnessCenterEmailBatchData: '{"publish":{"opts":{"persistent":true,"messageId":"","headers":{"x-origin-exchange-name":"BL.Messages","x-origin-routing-key":"Analytics.ServiceAccount.v1.FitnessCenterEmailBatchData.AllInfoCollected","x-message-body-size":0}}}}'
-  mq-FitnessCenterEmailToSend: '{"subscribe":{"xcapture":false,"qname":"Analytics.GenerateAndCollectImages@Analytics.ServiceAccount.v1.FitnessCenterEmailToSend.WeeklyScheduled","opts":{"durable":true,"arguments":{"x-dead-letter-exchange":"BL.Messages.Errors","x-dead-letter-routing-key":"Analytics.GenerateAndCollectImages@Analytics.ServiceAccount.v1.FitnessCenterEmailToSend.WeeklyScheduled"}}},"publish":{"opts":{"persistent":true,"messageId":"","headers":{"x-origin-exchange-name":"BL.Messages","x-origin-routing-key":"Analytics.ServiceAccount.v1.FitnessCenterEmailToSend.WeeklyScheduled","x-message-body-size":0}}}}'
-  on-err-raws: '{"s3client":{"maxAsyncS3":20,"s3RetryCount":3,"s3RetryDelay":1000,"multipartUploadThreshold":20971520,"multipartUploadSize":15728640,"s3Options":"*aws-s3-options"},"bucket":{"Bucket":"buildinglink-fitness"}}'
-  powerbi: '{"username":"powerbiwebsitemaster@buildinglink.com","password":"*password","clientId":"*clientId","profile":"fitness"}'
-  powerbi-fitness: |-
-    {
-        "name": "1501 - Aware Fitness Center Weekly Email Content",
-        "dataset": "cc60d4ee-2fbc-4260-bf20-256ea477b581",
-        "group": "b39cf42d-8d89-44b2-97ec-6c3843f099de",
-        "report": "adb489f2-6d17-42c1-9bbf-b873cc137549",
-        "role": "PropertyEmployee",
-        "capture": {
-            "script": "localhost.js",
-            "viewport": {"width": 778,"height": 3506},
-            "rect_linux": {"x": 30,"width": 706,"height": 468},
-            "rect_win32": {"x": 28,"width": 706,"height": 468},
-            "rect_darwin": {"x": 36,"width": 706,"height": 468},
-            "shots": {
-                "weekoverweek": {"y": 64},
-                "lastweekbyeqtype": {"y": 558},
-                "lastweekbyeqitem": {"y": 1048},
-                "populartimes": {"y": 1534},
-                "weekdayastagcloud": {"y": 2020},
-                "temperature": {"y": 2504},
-                "humidity": {"y": 2990}
-            }
-        }
-    }
-  sentry: '{"profile":"*test"}'
-  server: '{"port":3000}'
+  
