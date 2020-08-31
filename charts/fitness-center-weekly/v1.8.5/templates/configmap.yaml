@@ -3,7 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ include "fitness-center-weekly.fullname" }}
 data:
-  database: 
-    '{"profile":"*aware"}'
-  sentry: 
-    '{"profile":"*test"}'
+  database: "{'profile':'*aware'}"
+  sentry: "{'profile':'*test'}"
