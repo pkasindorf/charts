@@ -5,8 +5,7 @@ metadata:
   labels:
 {{ include "fitness-center-weekly.labels" . | indent 4 }}
 data:
-  database: 
-    {{ toYaml .Values.configOverride | indent 2 }}
-  sentry: 
-    {{ toYaml .Values.configOverride | indent 2 }}
+  fw.conf: |-
+    database: "aaa" 
+    sentry:  "bbb"
   
