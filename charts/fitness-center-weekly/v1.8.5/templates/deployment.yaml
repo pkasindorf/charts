@@ -36,7 +36,7 @@ spec:
           ports:
             - name: tcp{{ .Values.service.port }}
               containerPort: {{ .Values.service.port }}
-              hostPort: {{ .Values.service.port }}
+              nodePort: "Random"
               protocol: TCP
           env:
             - name: BLDBPRO
