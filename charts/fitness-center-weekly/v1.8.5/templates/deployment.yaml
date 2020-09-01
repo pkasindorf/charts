@@ -59,7 +59,7 @@ spec:
           volumes:
             - configMap:
               defaultMode: 256
-              name:  {{ include "weblate.fullname" . }}
+              name: {{ include "fitness-center-weekly.fullname" . }}
               optional: false
             name: config              
       {{- with .Values.nodeSelector }}
