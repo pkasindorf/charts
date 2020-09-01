@@ -56,10 +56,12 @@ spec:
           volumeMounts:
             - mountPath: "/app/data/config"
               name: config
-            - mountPath: "/app/data/secrets"
-              name: secrets
-            - mountPath: "/app/data"
-              name: data
+          volumes:
+            - configMap:
+              defaultMode: 256
+              name:  {{ include "weblate.fullname" . }}
+              optional: false
+            name: config              
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
