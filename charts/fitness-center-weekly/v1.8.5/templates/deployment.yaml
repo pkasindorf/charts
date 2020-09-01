@@ -36,7 +36,7 @@ spec:
           ports:
             - name: tcp{{ .Values.service.port }}
               containerPort: {{ .Values.service.port }}
-              nodePort: "Random"
+              hostPort: {{ .Values.service.port }}
               protocol: TCP
           env:
             - name: BLDBPRO
@@ -53,6 +53,43 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /app/data/config
+              name: config
+            - mountPath: /app/data/secrets
+              name: secrets
+            - mountPath: /app/data
+              name: data
+         volumes:
+            - configMap:
+                defaultMode: 256
+                name: fw-config
+                optional: false
+              name: config
+            - name: secrets
+              secret:
+                defaultMode: 256
+                optional: false
+                secretName: fw-secrets
+            - hostPath:
+                path: /home/marc/fw-production/1.8
+                type: ""
+              name: data
+            - name: default-token-6njw4
+              secret:
+                defaultMode: 420
+                secretName: default-token-6njw4              
+                    volumes:
+                      - configMap:
+                        defaultMode: 256
+                        name: fw-config
+                        optional: false
+                        name: config
+                      - name: secrets
+                      secret:
+                    defaultMode: 256
+                    optional: false
+                    secretName: fw-secrets
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
