@@ -53,15 +53,6 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          volumeMounts:
-            - mountPath: "/app/data/config"
-              name: config
-          volumes:
-            - configMap:
-              defaultMode: 256
-              name: {{ include "fitness-center-weekly.fullname" . }}
-              optional: false
-            name: config              
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
