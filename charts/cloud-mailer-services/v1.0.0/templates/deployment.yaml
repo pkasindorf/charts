@@ -20,10 +20,7 @@ spec:
       labels:
         {{- include "cloud-mailer-services.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+      imagePullSecrets: "cmsregistry"
       serviceAccountName: {{ include "cloud-mailer-services.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
