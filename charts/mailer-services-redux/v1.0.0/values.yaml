@@ -5,7 +5,10 @@
 replicaCount: 0
 
 image:
-  repository: blemailservicesregistry.azurecr.io/digestmailer
+  repository: 
+    - blemailservicesregistry.azurecr.io/digestmailer
+    - blemailservicesregistry.azurecr.io/bldigestqueuegenerator
+    - blemailservicesregistry.azurecr.io/blcloudmailer
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
