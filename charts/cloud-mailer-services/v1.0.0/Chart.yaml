@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v1
 name: cloud-mailer-services
 description: Buildinglink email services reimagined
 type: application
