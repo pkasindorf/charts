@@ -1,0 +1,13 @@
+apiVersion: v2
+name: cloud-mailer-services
+description: Buildinglink email services reimagined
+type: application
+version: 0.1.0
+appVersion: 1.0.0
+icon: file://../logo.png
+keywords:
+  - buildinglink
+  - mailers
+maintainers:
+  - name: buildinglink  
+    email: charts@buildinglink.com

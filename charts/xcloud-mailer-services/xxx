@@ -1,0 +1,7 @@
+ kubectl create secret docker-registry cmsregistry \
+  --docker-server blemailservicesregistry.azurecr.io \
+  --docker-email marc@buildinglink.com \
+  --docker-username=blemailservicesregistry \
+  --docker-password yB4Zw0Jx=irLEdTgFnx8O8cGe5dHJbQr
+
+kubectl delete secret docker-registry cmsregistry
