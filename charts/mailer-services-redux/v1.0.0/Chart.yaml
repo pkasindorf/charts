@@ -2,7 +2,7 @@ apiVersion: v2
 name: mailer-services-redux
 description: Buildinglink email services reimagined
 type: application
-version: 0.1.2
+version: 0.1.3
 appVersion: 1.0.0
 icon: file://../logo.png
 keywords:
