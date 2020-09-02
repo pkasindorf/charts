@@ -20,7 +20,7 @@ spec:
       labels:
         {{- include "mailer-services-redux.selectorLabels" . | nindent 8 }}
     spec:
-]      imagePullSecrets:
+      imagePullSecrets:
         - name: {{ .Values.imagePullSecrets }} 
       serviceAccountName: {{ include "mailer-services-redux.serviceAccountName" . }}
       securityContext:
