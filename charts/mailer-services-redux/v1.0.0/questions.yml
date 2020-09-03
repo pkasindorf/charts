@@ -1,21 +1,21 @@
 questions:
 - variable: defaultImage
   default: true
-  description: "Use default Docker image"
+  description: "Use default image"
   label: Use Default Image
   type: boolean
   show_subquestion_if: false
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "ranchercharts/chartmuseum-chartmuseum"
-    description: "Docker image repository"
+    default: "blemailservicesregistry.azurecr.io/digestmailer"
+    description: "default diagest mailer image"
     type: string
     label: Image Repository
     required: true
   - variable: image.tag
-    default: "v0.9.0"
-    description: "Docker image tag"
+    default: "latest"
+    description: "digest mailer image tag"
     type: string
     label: Image Tag
     required: true
