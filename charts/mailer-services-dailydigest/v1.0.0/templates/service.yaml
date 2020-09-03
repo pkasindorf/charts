@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "mailer-services-dailydigest.fullname" . }}
+  labels:
+    {{- include "mailer-services-dailydigest.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "mailer-services-dailydigest.selectorLabels" . | nindent 4 }}
