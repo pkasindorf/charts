@@ -5,7 +5,7 @@
 replicaCount: 0
 
 image:
-  repository: blemailservicesregistry.azurecr.io/digestmailer
+  repository: blemailservicesregistry.azurecr.io/blcloudmailer
   pullPolicy: Always
   tag: "latest"
 
