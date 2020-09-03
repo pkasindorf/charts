@@ -1,4 +1,4 @@
-# mailer services redux
+# mailer services
 
 ## Installing the Chart
 

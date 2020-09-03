@@ -1,4 +1,4 @@
-# mailer services redux 
+# mailer services 
 
 Buildinglink Mailer Services Reimagined
 

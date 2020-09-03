@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "mailer-services-redux.fullname" . }}-test-connection"
+  name: "{{ include "mailer-services-dailydigest.fullname" . }}-test-connection"
   labels:
-    {{- include "mailer-services-redux.labels" . | nindent 4 }}
+    {{- include "mailer-services-dailydigest.labels" . | nindent 4 }}
   annotations:
     "helm.sh/hook": test-success
 spec:
@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "mailer-services-redux.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ include "mailer-services-dailydigest.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
