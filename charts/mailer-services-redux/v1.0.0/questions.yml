@@ -19,12 +19,19 @@ questions:
     type: string
     label: Image Tag
     required: true
-  - variable: image.pullPolicy
-    default: "Always"
-    description: ""
-    type: enum
-    options:
-        - "Always"
-        - "IfNotPresent"
-        - "Never"
-    label: Image Pull Policy
+question:    
+- variable: image.pullPolicy
+  default: "Always"
+  description: ""
+  type: enum
+  options:
+      - "Always"
+      - "IfNotPresent"
+      - "Never"
+  label: Image Pull Policy
+- variable: replicaCount
+    default: "0"
+    description: "number of replicas"
+    type: int
+    min: 0
+    max: 100
