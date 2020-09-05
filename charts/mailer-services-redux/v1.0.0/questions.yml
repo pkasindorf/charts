@@ -19,3 +19,12 @@ questions:
     type: string
     label: Image Tag
     required: true
+  - variable: image.pullPolicy
+    default: "Always"
+    description: ""
+    type: enum
+    options:
+        - "Always"
+        - "IfNotPresent"
+        - "Never"
+    label: Image Pull Policy
