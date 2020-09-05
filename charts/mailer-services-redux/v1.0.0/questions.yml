@@ -19,7 +19,6 @@ questions:
     type: string
     label: Image Tag
     required: true
-question:    
 - variable: image.pullPolicy
   default: "Always"
   description: ""
@@ -30,8 +29,8 @@ question:
       - "Never"
   label: Image Pull Policy
 - variable: replicaCount
-    default: "0"
-    description: "number of replicas"
-    type: int
-    min: 0
-    max: 100
+  default: "0"
+  description: "number of replicas"
+  type: int
+  min: 0
+  max: 100
