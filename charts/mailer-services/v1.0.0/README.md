@@ -5,12 +5,12 @@
 To install the chart, use the following:
 
 ```console
-$ helm install mailer-services-redux
+$ helm install mailer-services
 ```
 
 ## Configuration
 
-The following table lists the configurable parameters of the mailer-services-redux chart and
+The following table lists the configurable parameters of the mailer-services chart and
 their default values.
 
 | Parameter                   | Description                                 | Default

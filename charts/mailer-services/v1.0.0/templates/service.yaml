@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "mailer-services-redux.fullname" . }}
+  name: {{ include "mailer-services.fullname" . }}
   labels:
-    {{- include "mailer-services-redux.labels" . | nindent 4 }}
+    {{- include "mailer-services.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "mailer-services-redux.selectorLabels" . | nindent 4 }}
+    {{- include "mailer-services.selectorLabels" . | nindent 4 }}

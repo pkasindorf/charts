@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "mailer-services-redux.name" -}}
+{{- define "mailer-services.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "mailer-services-redux.fullname" -}}
+{{- define "mailer-services.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "mailer-services-redux.chart" -}}
+{{- define "mailer-services.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "mailer-services-redux.labels" -}}
-helm.sh/chart: {{ include "mailer-services-redux.chart" . }}
-{{ include "mailer-services-redux.selectorLabels" . }}
+{{- define "mailer-services.labels" -}}
+helm.sh/chart: {{ include "mailer-services.chart" . }}
+{{ include "mailer-services.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "mailer-services-redux.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "mailer-services-redux.name" . }}
+{{- define "mailer-services.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "mailer-services.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "mailer-services-redux.serviceAccountName" -}}
+{{- define "mailer-services.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "mailer-services-redux.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "mailer-services.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

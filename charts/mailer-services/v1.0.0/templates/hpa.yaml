@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "mailer-services-redux.fullname" . }}
+  name: {{ include "mailer-services.fullname" . }}
   labels:
-    {{- include "mailer-services-redux.labels" . | nindent 4 }}
+    {{- include "mailer-services.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "mailer-services-redux.fullname" . }}
+    name: {{ include "mailer-services.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
