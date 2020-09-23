@@ -5,12 +5,12 @@
 To install the chart, use the following:
 
 ```console
-$ helm install mailer-services
+$ helm install priority-mailer
 ```
 
 ## Configuration
 
-The following table lists the configurable parameters of the mailer-services chart and
+The following table lists the configurable parameters of the priority-mailer chart and
 their default values.
 
 | Parameter                   | Description                                 | Default

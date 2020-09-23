@@ -8,8 +8,8 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "blemailservicesregistry.azurecr.io/digestmailer"
-    description: "default diagest mailer image"
+    default: "blemailservicesregistry.azurecr.io/blcloudmailer"
+    description: "priority mailer image"
     type: string
     label: Image Repository
     required: true
