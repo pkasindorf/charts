@@ -5,12 +5,12 @@
 To install the chart, use the following:
 
 ```console
-$ helm install priority-mailer
+$ helm install attachment-mailer
 ```
 
 ## Configuration
 
-The following table lists the configurable parameters of the priority-mailer chart and
+The following table lists the configurable parameters of the attachment-mailer chart and
 their default values.
 
 | Parameter                   | Description                                 | Default
