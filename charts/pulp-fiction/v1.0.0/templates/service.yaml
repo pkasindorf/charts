@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "digest-q-gen.fullname" . }}
+  name: {{ include "pulp-fiction.fullname" . }}
   labels:
-    {{- include "digest-q-gen.labels" . | nindent 4 }}
+    {{- include "pulp-fiction.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "digest-q-gen.selectorLabels" . | nindent 4 }}
+    {{- include "pulp-fiction.selectorLabels" . | nindent 4 }}

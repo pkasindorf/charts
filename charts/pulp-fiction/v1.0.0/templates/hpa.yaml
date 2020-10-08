@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "digest-q-gen.fullname" . }}
+  name: {{ include "pulp-fiction.fullname" . }}
   labels:
-    {{- include "digest-q-gen.labels" . | nindent 4 }}
+    {{- include "pulp-fiction.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "digest-q-gen.fullname" . }}
+    name: {{ include "pulp-fiction.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "digest-q-gen.fullname" . }}
+  name: {{ include "pulp-fiction.fullname" . }}
   labels:
-    {{- include "digest-q-gen.labels" . | nindent 4 }}
+    {{- include "pulp-fiction.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "digest-q-gen.selectorLabels" . | nindent 6 }}
+      {{- include "pulp-fiction.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -18,11 +18,11 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "digest-q-gen.selectorLabels" . | nindent 8 }}
+        {{- include "pulp-fiction.selectorLabels" . | nindent 8 }}
     spec:
       imagePullSecrets:
         - name: {{ .Values.imagePullSecrets }} 
-      serviceAccountName: {{ include "digest-q-gen.serviceAccountName" . }}
+      serviceAccountName: {{ include "pulp-fiction.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
