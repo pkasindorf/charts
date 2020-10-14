@@ -5,12 +5,12 @@
 replicaCount: 0
 
 image:
-  repository: blemailservicesregistry.azurecr.io/blcloudmailer
+  repository: blemailservicesregistrydev.azurecr.io/blcloudmailer
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
-imagePullSecrets: blemailservicesregistry
+imagePullSecrets: blemailservicesregistrydev
 nameOverride: ""
 fullnameOverride: ""
 

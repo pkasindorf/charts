@@ -15,7 +15,7 @@ their default values.
 
 | Parameter                   | Description                                 | Default
 |:----------------------------|:--------------------------------------------|:---------------------------------------------------|
-| `image.repository`          | Container image to use                      | `blemailservicesregistry.azurecr.io/blcloudmailer` |
+| `image.repository`          | Container image to use                      | `blemailservicesregistrydev.azurecr.io/blcloudmailer` |
 | `image.tag`                 | Container image tag to deploy               | `latest`                                           |
 | `image.pullPolicy`          | Container pull policy                       | `Always`                                           |
 | `replicaCount`              | k8s replicas                                | `0`                                                |

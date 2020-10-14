@@ -8,7 +8,7 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "blemailservicesregistry.azurecr.io/blcloudmailerattachmentsdev"
+    default: "blemailservicesregistrydev.azurecr.io/blcloudmailerattachmentsdev"
     description: "attachment mailer image"
     type: string
     label: Image Repository

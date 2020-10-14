@@ -8,7 +8,7 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "blemailservicesregistry.azurecr.io/digestqueuedev"
+    default: "blemailservicesregistrydev.azurecr.io/digestqueuedev"
     description: "priority mailer image"
     type: string
     label: Image Repository
